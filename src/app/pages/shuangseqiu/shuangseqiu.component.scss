@@ -1,0 +1,29 @@
+.red {
+    background: red;
+    color: #fff;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.blow {
+    background: blue;
+    color: #fff;
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    span {
+        margin: 0 10px;
+    }
+}

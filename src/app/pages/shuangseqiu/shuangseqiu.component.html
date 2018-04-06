@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="card-header">
+    双色球预测
+    <a style="float:right;color: #fff;" class="btn btn-primary btn-sm">添加</a>
+  </div>
+  <div class="card-body">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>期号</th>
+          <th>红球1</th>
+          <th>红球2</th>
+          <th>红球3</th>
+          <th>红球4</th>
+          <th>红球5</th>
+          <th>红球6</th>
+          <th>篮球</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items; index as i;">
+          <td>{{item.data}}</td>
+          <td *ngFor="let it of item.value[0]">
+            <span class="red">{{it}}</span>
+          </td>
+          <td *ngFor="let it of item.value[1]">
+            <span class="blow">{{it}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header">
+    预测下期结果
+    <a style="float:right;color: #fff;" class="btn btn-primary btn-sm" (click)="handler()">重新计算</a>
+  </div>
+  <div class="card-body">
+    <div class="flex-row">
+      <span class="red" *ngFor="let item of redResults">{{item}}</span>
+      <span class="blow" *ngFor="let item of blowResults">{{item}}</span>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ import { Add1dComponent } from './add-1d/add-1d.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Add2dComponent } from './add-2d/add-2d.component';
 import { Add3dComponent } from './add-3d/add-3d.component';
+import { ShuangseqiuComponent } from './shuangseqiu/shuangseqiu.component';
 
 @NgModule({
   imports: [
@@ -14,6 +15,6 @@ import { Add3dComponent } from './add-3d/add-3d.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  declarations: [Add1dComponent, Add2dComponent, Add3dComponent]
+  declarations: [Add1dComponent, Add2dComponent, Add3dComponent, ShuangseqiuComponent]
 })
 export class PagesModule { }
