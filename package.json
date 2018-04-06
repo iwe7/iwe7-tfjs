@@ -23,6 +23,7 @@
     "@angular/router": "^5.2.0",
     "@tensorflow/tfjs": "^0.7.0",
     "@types/mathjs": "^0.0.39",
+    "bootstrap": "^4.0.0",
     "core-js": "^2.4.1",
     "mathjs": "^4.0.1",
     "rxjs": "^5.5.6",

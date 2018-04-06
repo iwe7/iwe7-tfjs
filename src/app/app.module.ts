@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TfjsModule } from './tfjs/tfjs.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,6 +16,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    RouterModule.forRoot([{
+      path: '',
+      loadChildren: 'app/pages/pages.module#PagesModule'
+    }]),
     TfjsModule.forRoot()
   ],
   providers: [],

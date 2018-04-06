@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col">
+    <div class="card" [formGroup]="form">
+      <div class="card-header">
+        add1D 一维数组+标量
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <label for="exampleInputEmail1">一唯数组</label>
+          <div class="flex-row" formArrayName="a">
+            <div *ngFor="let item of a.controls;index as i;" [formGroupName]="i">
+              <input class="form-control" type="number" formControlName="num">
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">缩放指标</label>
+          <input class="form-control" type="number" formControlName="b">
+        </div>
+        <div class="form-group">
+          <div class="alert alert-primary" role="alert">
+            计算结果&nbsp;
+            <span *ngFor="let i of res">
+              {{i}} &nbsp;
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
