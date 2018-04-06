@@ -1,0 +1,19 @@
+<div class="main" [formGroup]="form">
+  <div class="flex-row" formArrayName="a">
+    一唯数组：
+    <div *ngFor="let item of a.controls;index as i;" [formGroupName]="i">
+      <input type="number" formControlName="num">
+    </div>
+  </div>
+  <div>
+    缩放指标：
+    <input type="number" formControlName="b">
+  </div>
+
+  <div>
+    相加结果：
+    <span *ngFor="let i of res">
+      {{i}} &nbsp;
+    </span>
+  </div>
+</div>
