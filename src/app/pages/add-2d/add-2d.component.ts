@@ -56,7 +56,7 @@ export class Add2dComponent implements OnInit {
         };
       })
       .switchMap(res => {
-        return this.tf.add2D(res.a, res.b);
+        return this.tf.add(res.a, res.b);
       })
       .subscribe(res => {
         this.res = res;

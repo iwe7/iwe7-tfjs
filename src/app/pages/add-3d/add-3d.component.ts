@@ -92,7 +92,7 @@ export class Add3dComponent implements OnInit {
         };
       })
       .switchMap(res => {
-        return this.tf.add3D(res.a, res.b);
+        return this.tf.add(res.a, res.b);
       })
       .subscribe(res => {
         this.res = res;

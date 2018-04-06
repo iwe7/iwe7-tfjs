@@ -34,16 +34,11 @@ export class Add1dComponent implements OnInit {
         };
       })
       .switchMap(res => {
-        return this.tf.add1D(res.a, res.b);
+        return this.tf.add(res.a, res.b);
       })
       .subscribe(res => {
         this.res = res;
       });
-    const a = this.tf.tensor1d([1, 2, 3]);
-    const b = this.tf.scalar(2);
-    this.tf.add1D(a, b).subscribe(res => {
-      this.res = res;
-    });
   }
 
   createFormArray(num: number = 0) {
@@ -52,5 +47,7 @@ export class Add1dComponent implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.form.get("b").setValue(2);
+  }
 }
