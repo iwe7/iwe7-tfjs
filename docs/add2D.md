@@ -1,4 +1,4 @@
-### add2D 二维数组+标量
+### 二维数组+标量
 - tf.service.ts
 ```ts
 tensor2d(arr: number[][]) {

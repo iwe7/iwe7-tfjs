@@ -3,7 +3,7 @@
 * [一维数组+标量](https://github.com/iwe7/iwe7-tfjs/blob/master/docs/add1D.md)
 * [二维数组+标量](https://github.com/iwe7/iwe7-tfjs/blob/master/docs/add2D.md)
 
-### add1D 一维数组+标量
+### 一维数组+标量
 
 * tf.service.ts
 
@@ -124,7 +124,7 @@ export class AppComponent {
 }
 ```
 
-### add2D 二维数组+标量
+### 二维数组+标量
 
 * tf.service.ts
 
