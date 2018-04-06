@@ -25,7 +25,12 @@ export class Add2dComponent implements OnInit {
           this.createFormArray(0),
           this.createFormArray(1),
           this.createFormArray(2)
-        ])
+        ]),
+        this.fb.array([
+          this.createFormArray(0),
+          this.createFormArray(1),
+          this.createFormArray(2)
+        ]),
       ]),
       b: [2]
     });

@@ -5,7 +5,9 @@ import {
   scalar,
   Scalar,
   Tensor2D,
-  tensor2d
+  tensor2d,
+  Tensor3D,
+  tensor3d
 } from "@tensorflow/tfjs";
 import { Subject } from "rxjs/Subject";
 
@@ -26,6 +28,20 @@ export class TfService {
   }
 
   add2D(a: Tensor2D, b: Scalar) {
+    let sub: Subject<any> = new Subject();
+    let result = a
+      .add(b)
+      .data()
+      .then(res => {
+        sub.next(res);
+      });
+    return sub;
+  }
+
+  tensor3d(arr: number[][][]) {
+    return tensor3d(arr);
+  }
+  add3D(a: Tensor3D, b: Scalar) {
     let sub: Subject<any> = new Subject();
     let result = a
       .add(b)
