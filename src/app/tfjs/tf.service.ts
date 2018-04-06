@@ -17,12 +17,12 @@ export class TfService {
     return tensor1d(arr);
   }
 
-  tensor2d(arr: number[][]) {
-    return tensor2d(arr);
-  }
-
   scalar(n: number): Scalar {
     return scalar(n);
+  }
+
+  tensor2d(arr: number[][]) {
+    return tensor2d(arr);
   }
 
   add2D(a: Tensor2D, b: Scalar) {
