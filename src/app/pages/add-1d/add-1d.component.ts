@@ -42,7 +42,6 @@ export class Add1dComponent implements OnInit {
     const a = this.tf.tensor1d([1, 2, 3]);
     const b = this.tf.scalar(2);
     this.tf.add1D(a, b).subscribe(res => {
-      console.log(res);
       this.res = res;
     });
   }

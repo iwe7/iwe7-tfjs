@@ -2,14 +2,16 @@
   <div class="col">
     <div class="card" [formGroup]="form">
       <div class="card-header">
-        add1D 一维数组+标量
+        add2D 二维维数组+标量
       </div>
       <div class="card-body">
         <div class="form-group">
-          <label for="exampleInputEmail1">一维数组</label>
-          <div class="flex-row" formArrayName="a">
-            <div *ngFor="let item of a.controls;index as i;" [formGroupName]="i">
-              <input class="form-control" type="number" formControlName="num">
+          <label for="exampleInputEmail1">二维唯数组</label>
+          <div formArrayName="a">
+            <div class="flex-row" *ngFor="let item of a.controls;index as i;" [formGroupName]="i">
+              <div *ngFor="let item of item.controls;index as j;" [formGroupName]="j">
+                <input class="form-control" type="number" formControlName="num">
+              </div>
             </div>
           </div>
         </div>

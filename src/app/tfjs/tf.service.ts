@@ -25,6 +25,17 @@ export class TfService {
     return scalar(n);
   }
 
+  add2D(a: Tensor2D, b: Scalar) {
+    let sub: Subject<any> = new Subject();
+    let result = a
+      .add(b)
+      .data()
+      .then(res => {
+        sub.next(res);
+      });
+    return sub;
+  }
+
   add1D(a: Tensor1D, b: Scalar) {
     let sub: Subject<any> = new Subject();
     let result = a
